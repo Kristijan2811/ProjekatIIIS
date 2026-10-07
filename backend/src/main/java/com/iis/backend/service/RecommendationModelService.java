@@ -134,6 +134,8 @@ public class RecommendationModelService {
         boolean requiredFailed = false;
         var explanation = new StringBuilder();
 
+        
+
         for (var criterion : model.getCriteria()) {
             var actual = values.get(criterion.getMetric().getId());
             var criterionScore = scoreCriterion(actual, criterion);
